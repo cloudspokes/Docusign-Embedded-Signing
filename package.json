@@ -15,7 +15,6 @@
     , "jade": "*"
     , "socket.io": "*"
     , "nforce" : "*"
-    , "connect-heroku-redis" : "*"
     , "connect-redis" : "*"
   }
 }
