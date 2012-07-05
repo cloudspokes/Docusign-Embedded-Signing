@@ -19,7 +19,15 @@ var express = require('express')
 
 var app = express();
 var redisStore = require('connect-redis')(express);
-var pRedisStore = new redisStore();
+var pRedisStore;
+
+if (process.env.REDISTOGO_URL) {
+    var rtg   = require("url").parse(process.env.REDISTOGO_URL);
+    pRedisStore = require("redis").createClient(rtg.port, rtg.hostname);
+    pRedisStore.auth(rtg.auth.split(":")[1]);
+} else {
+    pRedisStore = new redisStore();
+}
 
 function p (a) {
   console.log(a);
