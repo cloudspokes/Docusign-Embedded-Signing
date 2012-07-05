@@ -78,8 +78,13 @@ cloudSpokesIO.set ('authorization', function (data, accept) {
  var cookies = connect.utils.parseSignedCookie (data.headers.cookie)
   , supperDupper = cookies["supperDupper"];
 
+  console.log('=== authorization called');
+
   pRedisStore.load(supperDupper, function (err, sess) {
-    if(err) return accept(err);
+    if(err) {
+      console.log('pRedisStore error: '+err);
+      return accept(err);
+    } 
     data.session = sess;
     p (data);
     accept(null, true)
@@ -89,6 +94,7 @@ cloudSpokesIO.set ('authorization', function (data, accept) {
 cloudSpokesIO
   .sockets
     .on('connection', function (socket) {
+      console.log('=== socket on connect called');
       var hs = socket.handshake;
       socket
         .on('signingInfo', function(userId, userName, docId, email) {
