@@ -15,7 +15,7 @@
 						, "email" : "jeffdonthemic@gmail.com"
 						, "name" : "jeffd"					
 					}]
-				, "configUrlBase" : "http://localhost:3001"
+				, "configUrlBase" : "http://docusign-sandbox.herokuapp.com"
 				, "baseUrl" : ""
 
 	}, "httpOptions" : {
