@@ -17,8 +17,7 @@ var express = require('express')
   , configData = fs.readFileSync("config.json", 'utf-8')
   , api = DocuSign.API(JSON.parse(configData));
 
-// var redisUrl = require('url').parse(process.env.REDISTOGO_URL),
-//     redisAuth = redisUrl.auth.split(':');  
+var redisUrl = require('url').parse(process.env.REDISTOGO_URL), redisAuth = redisUrl.auth.split(':');  
 // app.set('redisHost', redisUrl.hostname);
 // app.set('redisPort', redisUrl.port);
 // app.set('redisDb', redisAuth[0]);
