@@ -39,6 +39,15 @@ app.configure(function(){
   app.use(express.static(__dirname + '/public'));
 });
 
+app.configure('production', function () {
+    var redisUrl = url.parse(process.env.REDISTOGO_URL),
+        redisAuth = redisUrl.auth.split(':');  
+    app.set('redisHost', redisUrl.hostname);
+    app.set('redisPort', redisUrl.port);
+    app.set('redisDb', redisAuth[0]);
+    app.set('redisPass', redisAuth[1]);
+}); 
+
 app.configure('development', function(){
   app.use(express.errorHandler());
 });
