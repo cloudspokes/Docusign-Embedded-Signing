@@ -15,20 +15,11 @@ var express = require('express')
   , DocuSign = require("./lib/docusign.js")
   , fs = require("fs")
   , configData = fs.readFileSync("config.json", 'utf-8')
-  , redis = require('redis')
   , api = DocuSign.API(JSON.parse(configData));
 
 var app = express();
-var redisStore = require('connect-redis')(express);
-var pRedisStore;
-
-if (process.env.REDISTOGO_URL) {
-    var rtg   = require("url").parse(process.env.REDISTOGO_URL);
-    pRedisStore = require("redis").createClient(rtg.port, rtg.hostname);
-    pRedisStore.auth(rtg.auth.split(":")[1]);
-} else {
-    pRedisStore = new redisStore();
-}
+var redisStore = require('connect-heroku-redis')(express);
+var pRedisStore = new redisStore();
 
 function p (a) {
   console.log(a);
