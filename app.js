@@ -17,6 +17,13 @@ var express = require('express')
   , configData = fs.readFileSync("config.json", 'utf-8')
   , api = DocuSign.API(JSON.parse(configData));
 
+var redisUrl = require('url').parse(process.env.REDISTOGO_URL),
+    redisAuth = redisUrl.auth.split(':');  
+app.set('redisHost', redisUrl.hostname);
+app.set('redisPort', redisUrl.port);
+app.set('redisDb', redisAuth[0]);
+app.set('redisPass', redisAuth[1]);
+
 var app = express();
 var redisStore = require('connect-redis')(express);
 var pRedisStore = new redisStore();
@@ -25,8 +32,7 @@ function p (a) {
   console.log(a);
 }
 
-console.log('===dumping env');
-console.log(JSON.stringify(process.ENV, null, 3));
+
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3001);
@@ -42,12 +48,7 @@ app.configure(function(){
   app.use(express.static(__dirname + '/public'));
 });
 
-    var redisUrl = require('url').parse(process.env.REDISTOGO_URL),
-        redisAuth = redisUrl.auth.split(':');  
-    app.set('redisHost', redisUrl.hostname);
-    app.set('redisPort', redisUrl.port);
-    app.set('redisDb', redisAuth[0]);
-    app.set('redisPass', redisAuth[1]);
+
 
 
 
