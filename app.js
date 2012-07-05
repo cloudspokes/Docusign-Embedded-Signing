@@ -15,6 +15,7 @@ var express = require('express')
   , DocuSign = require("./lib/docusign.js")
   , fs = require("fs")
   , configData = fs.readFileSync("config.json", 'utf-8')
+  , redis = require('redis')
   , api = DocuSign.API(JSON.parse(configData));
 
 var app = express();

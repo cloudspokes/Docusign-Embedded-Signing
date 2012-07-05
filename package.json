@@ -15,6 +15,7 @@
     , "jade": "*"
     , "socket.io": "*"
     , "nforce" : "*"
+    , "redis": ">= 0.7.0"
     , "connect-redis" : "*"
   }
 }
