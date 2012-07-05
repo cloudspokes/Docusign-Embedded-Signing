@@ -38,9 +38,9 @@ app.configure(function(){
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
 });
-
+ 
 app.configure('production', function () {
-    var redisUrl = url.parse(process.env.REDISTOGO_URL),
+    var redisUrl = require('url').parse(process.env.REDISTOGO_URL),
         redisAuth = redisUrl.auth.split(':');  
     app.set('redisHost', redisUrl.hostname);
     app.set('redisPort', redisUrl.port);
