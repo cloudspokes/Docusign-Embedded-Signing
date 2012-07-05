@@ -25,8 +25,10 @@ var redisUrl = require('url').parse(process.env.REDISTOGO_URL), redisAuth = redi
 
 var app = express();
 var redisStore = require('connect-redis')(express);
-var pRedisStore = new redisStore({ port: redisUrl.port, host: redisUrl.hostname, 
-  db: redisAuth[0] pass: redisAuth[1] });
+var redisOptions = { port: redisUrl.port, host: redisUrl.hostname, 
+  db: redisAuth[0], pass: redisAuth[1] };
+console.log(JSON.stringify(redisOptions, null, 2));
+var pRedisStore = new redisStore(redisOptions);
 
 function p (a) {
   console.log(a);

@@ -5,10 +5,10 @@ cloudSpokes-embeddedSigning
 
 Environmental variables needed:
 
-heroku config:add DATABASEDOTCOM_CLIENT_ID=
-heroku config:add DATABASEDOTCOM_CLIENT_SECRET=
+heroku config:add DATABASEDOTCOM_CLIENT_ID='3MVG9FS3IyroMOh4MAEAjkmHk3ar.3patsxNiipcdm05TI9Tz2Q73IZFugW_aXBZs8rUrnQjNUVdM2wL5CAcQ'
+heroku config:add DATABASEDOTCOM_CLIENT_SECRET='550269079582676591'
 heroku config:add DATABASEDOTCOM_REDIRECT_URI= (http://localhost:3001/oauth/_callback)
-heroku config:add DATABASEDOTCOM_ENVIRONMENT=
+heroku config:add DATABASEDOTCOM_ENVIRONMENT=sandbox
 heroku config:add SFDC_USERNAME=
 heroku config:add SFDC_PASSWORD=
 
