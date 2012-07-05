@@ -1,0 +1,33 @@
+{
+	"credentials" : {
+		"userName" : "jdouglas@appirio.com"
+		, "userPassword" : "6.69%3*=W"
+		, "integratorKey" : "APPI-9e38cbf0-c401-41ad-bba8-b235d1da8638"
+	} , "data" : {
+				"templates" : [{
+						"templateId" : "xxxx99097A71-5EE0-43DD-A16F-6D0066983910"
+						, "roleName" : "RoleOne"
+						, "email" : "jeffdonthemic@gmail.com"
+						, "name" : "jeffd"
+					}, {
+						"templateId" : "xxxx8197D537-7C7D-4144-B0F0-521BFA8F489B"
+						, "roleName" : "RoleOne"
+						, "email" : "jeffdonthemic@gmail.com"
+						, "name" : "jeffd"					
+					}]
+				, "configUrlBase" : "http://localhost:3001"
+				, "baseUrl" : ""
+
+	}, "httpOptions" : {
+		    "headers": {
+		    		 "X-DocuSign-Authentication": ""
+		        	, "Accept": "application/json"
+		        	, "Content-Type": "application/json"
+		    }
+		    , "protocol": "https:"
+		    , "host": "demo.docusign.net"
+		    , "port": 443
+		    , "method": ""
+		    , "path": ""
+		}
+}

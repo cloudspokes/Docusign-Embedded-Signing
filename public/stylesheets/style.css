@@ -1,0 +1,225 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+body {
+  padding: 50px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+.wrapper {
+  width: 1124px;
+  margin: 0px;
+  padding: 10px;
+}
+.colBig {
+  float: left;
+  width: 960px;
+  height: 800px;
+}
+
+
+
+.colBig h1 {
+  text-align: center;
+  display: inline;
+  float:left;
+  padding-top:25px;
+  font-size: 40px;
+  padding-left: 15px;
+}
+
+.colBig .txt  {
+  padding-left: 30px;
+}
+.colBig h2 {
+  padding: 30px 100px;
+  text-align: center;
+}
+.colNames {
+  margin-top: 40px;
+  float: left;
+  width: 150px;
+  padding-left: 10px;
+  
+}
+
+.clearFix {
+  clear: both;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+div.colNames input {
+  margin-top: 5px;
+}
+
+div.colNames a
+{
+  margin-left: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+div.links {
+  margin-top:20px;
+}
+
+.disabled {
+  background-color: red;
+
+}
+.disabled span, .ready span {
+  color: white;
+}
+.enabled {
+  background-color: orange;
+}
+.ready {
+  background-color: green;
+}
+
+.didNotSign {
+  color: red;
+}
+.signed {
+  color: green;
+}
+
+
+div.center {
+  text-align: center;
+  height: 500px;
+  width: 900px;
+  padding-top:50px;
+}
+
+.logo {
+  margin: 10px;
+  float:left;
+
+}
+
+img.plusPNG {
+  margin-left:10px;
+  padding-top: 45px;
+ 
+}
+
+img.dsRoot {
+ 
+  margin-left: 15px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+.wrapper {
+  width: 1124px;
+  margin: 0px;
+  padding: 10px;
+}
+.colBig {
+  float: left;
+  width: 960px;
+  height: 800px;
+}
+
+
+
+.colBig h1 {
+  text-align: center;
+  display: inline;
+  float:left;
+  padding-top:25px;
+  font-size: 40px;
+  padding-left: 15px;
+}
+
+.colBig .txt  {
+  padding-left: 30px;
+}
+.colBig h2 {
+  padding: 30px 100px;
+  text-align: center;
+}
+.colNames {
+  margin-top: 40px;
+  float: left;
+  width: 150px;
+  padding-left: 10px;
+  
+}
+
+.clearFix {
+  clear: both;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+div.colNames input {
+  margin-top: 5px;
+}
+
+div.colNames a
+{
+  margin-left: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+div.links {
+  margin-top:20px;
+}
+
+.disabled {
+  background-color: red;
+
+}
+.disabled span, .ready span {
+  color: white;
+}
+.enabled {
+  background-color: orange;
+}
+.ready {
+  background-color: green;
+}
+
+.didNotSign {
+  color: red;
+}
+.signed {
+  color: green;
+}
+
+
+div.center {
+  text-align: center;
+  height: 500px;
+  width: 900px;
+  padding-top:50px;
+}
+
+.logo {
+  padding-top: 15px;
+}

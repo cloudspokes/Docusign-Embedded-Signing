@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+  div.wrapper
+    div#container.colBig  
+      img.logo(src="/images/cloudspokes-logo-hor.png") 
+      img.dsRoot(src="/images/docusign-logo.png",style="padding-left:300px;padding-top:40px") 
+      div.clearFix
+      h3(style="padding-left:10px") DocuSign your CloudSpokes tax form.
+      h2 Please wait while we fetch it from DocuSign. 
+      input(id="userId", type="hidden", value="#{data['userId']}")
+      input(id="userName", type="hidden", value="#{data['userName']}")
+      input(id="docId", type="hidden", value="#{data['docId']}")
+      input(id="email", type="hidden", value="#{data['email']}")
+      iframe(width="100%", height="100%",frameborder=0)
+    div.clearFix
+  include ../mainScripts
