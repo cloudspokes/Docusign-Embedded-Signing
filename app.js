@@ -25,6 +25,9 @@ function p (a) {
   console.log(a);
 }
 
+console.log('===dumping env');
+console.log(JSON.stringify(process.ENV, null, 3));
+
 app.configure(function(){
   app.set('port', process.env.PORT || 3001);
   app.set('views', __dirname + '/views');
