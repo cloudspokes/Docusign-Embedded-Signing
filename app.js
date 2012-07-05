@@ -18,7 +18,7 @@ var express = require('express')
   , api = DocuSign.API(JSON.parse(configData));
 
 var app = express();
-var redisStore = require('connect-heroku-redis')(express);
+var redisStore = require('connect-redis')(express);
 var pRedisStore = new redisStore();
 
 function p (a) {
