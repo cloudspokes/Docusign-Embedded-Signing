@@ -24,7 +24,7 @@
 		        	, "Content-Type": "application/json"
 		    }
 		    , "protocol": "https:"
-		    , "host": "demo.docusign.net"
+		    , "host": "SET-VIA-ENV-VAR"
 		    , "port": 443
 		    , "method": ""
 		    , "path": ""
