@@ -1,19 +1,19 @@
 {
 	"credentials" : {
-		"userName" : "jdouglas@appirio.com"
-		, "userPassword" : "6.69%3*=W"
-		, "integratorKey" : "APPI-9e38cbf0-c401-41ad-bba8-b235d1da8638"
+		"userName" : "SET-VIA-ENV-VAR"
+		, "userPassword" : "SET-VIA-ENV-VAR"
+		, "integratorKey" : "SET-VIA-ENV-VAR"
 	} , "data" : {
 				"templates" : [{
-						"templateId" : "xxxx99097A71-5EE0-43DD-A16F-6D0066983910"
+						"templateId" : "NOT-USED"
 						, "roleName" : "RoleOne"
-						, "email" : "jeffdonthemic@gmail.com"
-						, "name" : "jeffd"
+						, "email" : "NOT-USED"
+						, "name" : "NOT-USED"
 					}, {
-						"templateId" : "xxxx8197D537-7C7D-4144-B0F0-521BFA8F489B"
+						"templateId" : "NOT-USED"
 						, "roleName" : "RoleOne"
-						, "email" : "jeffdonthemic@gmail.com"
-						, "name" : "jeffd"					
+						, "email" : "NOT-USED"
+						, "name" : "NOT-USED"					
 					}]
 				, "baseUrl" : ""
 
