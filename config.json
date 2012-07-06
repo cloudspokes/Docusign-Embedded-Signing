@@ -15,7 +15,6 @@
 						, "email" : "jeffdonthemic@gmail.com"
 						, "name" : "jeffd"					
 					}]
-				, "configUrlBase" : "http://docusign-sandbox.herokuapp.com"
 				, "baseUrl" : ""
 
 	}, "httpOptions" : {
