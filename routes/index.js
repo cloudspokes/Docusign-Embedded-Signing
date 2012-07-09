@@ -18,6 +18,7 @@ exports.embeddedSigningComplete = function(req, res) {
   var userId = req.params.userId;
   console.log('request params: ' + JSON.stringify(req.params));
   var eventType = req['query']['event'];
+  console.log('===== eventType:'+eventType);
 
   if (eventType === 'signing_complete') {
     //
@@ -26,8 +27,12 @@ exports.embeddedSigningComplete = function(req, res) {
     cs.updateMember(userId);
     res.render('SigningComplete/success'
               , { title: "Signing Complete Success!", user: userId });
-  } else {
+  } else if (eventType == 'decline') {
     res.render('SigningComplete/fail'
+              , { title: "Sign Documents"
+                  , event: eventType});
+  } else {
+    res.render('SigningComplete/cancel'
               , { title: "Sign Documents"
                   , event: eventType});
   }
