@@ -107,7 +107,7 @@ cloudSpokesIO
         .on('disconnect', function () {
           delete users[socket.id];
           delete connections[hs.userName];
-
+          console.log('Disconnect from docusign');
            console.log ("users length " + Object.keys(users).length)
         })
   });
