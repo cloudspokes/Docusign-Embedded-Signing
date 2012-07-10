@@ -114,19 +114,21 @@ cloudSpokesIO
         .on('disconnect', function () {
           delete users[socket.id];
           delete connections[hs.userName];
-           console.log ("users length " + Object.keys(users).length)
+           console.log ("users length " + Object.keys(users).length);
+           console.log('=== socket on disconnect called');
         })
   });
 
 controller
   .on('login', function(userId, userName, docId, email) {
-    console.log('==== just triggered embedded signing for userId: ' + userId);
-    console.log('==== just triggered embedded signing for userName: ' + userName);
-    console.log('==== just triggered embedded signing doc: ' + docId);
-    console.log('==== just triggered embedded signing email: ' + email);
+    console.log('=== just triggered embedded signing for userId: ' + userId);
+    console.log('=== just triggered embedded signing for userName: ' + userName);
+    console.log('=== just triggered embedded signing doc: ' + docId);
+    console.log('=== just triggered embedded signing email: ' + email);
     triggerEmbeddedSigning(userId, userName, docId, email);
   })
   .on('recipientUrl', function(inObj) {
+      console.log('=== socket on connect called');  
       connections[inObj.user].emit('recipientUrl', inObj.data.url); 
   });
 
@@ -134,7 +136,7 @@ controller
 function triggerEmbeddedSigning(userId, userName, docId, email) {
 
   var id = userId;
-  console.log('====triggerEmbeddedSigning userId: '+userId);
+  console.log('===triggerEmbeddedSigning userId: '+userId);
 
   var inTemplate = {
       "emailBlurb": "Please DocuSign your document."
@@ -186,8 +188,8 @@ function triggerEmbeddedSigning(userId, userName, docId, email) {
     data = JSON.parse(data);
     
     // pass the member's id back to through the data
-    console.log('==== parseCreateEnvelopeCaptive for userId: ' + id);
-    console.log('==== parseCreateEnvelopeCaptive for datea: ' + util.inspect(data));
+    console.log('=== parseCreateEnvelopeCaptive for userId: ' + id);
+    console.log('=== parseCreateEnvelopeCaptive for datea: ' + util.inspect(data));
 
     next({data: data, memberId: id});
 
