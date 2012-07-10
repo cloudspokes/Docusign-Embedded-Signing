@@ -73,11 +73,11 @@ var users = {};
 var connections ={};
 
 // assuming io is the Socket.IO server object
-cloudSpokesIO.configure(function () { 
-  cloudSpokesIO.set("transports", ["xhr-polling"]); 
-  cloudSpokesIO.set("polling duration", 5); 
-  cloudSpokesIO.set("close timeout", 40);  
-});
+// cloudSpokesIO.configure(function () { 
+//   cloudSpokesIO.set("transports", ["xhr-polling"]); 
+//   cloudSpokesIO.set("polling duration", 5); 
+//   cloudSpokesIO.set("close timeout", 40);  
+// });
 
 cloudSpokesIO.set ('authorization', function (data, accept) {
  var cookies = connect.utils.parseSignedCookie (data.headers.cookie)
