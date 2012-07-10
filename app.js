@@ -75,9 +75,7 @@ var connections ={};
 // assuming io is the Socket.IO server object
 cloudSpokesIO.configure(function () { 
   cloudSpokesIO.set("transports", ["xhr-polling"]); 
-  cloudSpokesIO.set("polling duration", 30); 
-  cloudSpokesIO.set("heartbeat interval", 20);
-  cloudSpokesIO.set("heartbeat timeout", 60); 
+  cloudSpokesIO.set("polling duration", 5); 
   cloudSpokesIO.set("close timeout", 40);  
 });
 
