@@ -54,8 +54,10 @@ app.configure('development', function(){
 });
 
 app.get('/', routes.root);
+app.get('/embeddedComplete/:userId/:envelopeId', routes.embeddedSigningComplete);
+
 app.get('/sign/:userId/:userName/:docId/:email', routes.embeddedSigning);
-app.get('/:userId', routes.embeddedSigningComplete);
+app.get('/:userId/', routes.embeddedSigningComplete);
 
 var server = http.createServer(app);
 
@@ -140,6 +142,12 @@ function triggerEmbeddedSigning(userId, userName, docId, email) {
             , "name": userName
             , "roleName": "RoleOne"
             , "clientUserId" : userName
+            , 'tabs' : {
+                'textTabs' : [{
+                  'tabLabel': "Name"
+                  , "value": "michael jackson"
+                }]
+            }
           }] 
       ,"status": "sent"
   };
