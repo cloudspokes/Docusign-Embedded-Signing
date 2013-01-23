@@ -19,7 +19,7 @@ exports.root = function(req, res) {
 exports.embeddedSigning = function (req, res) {
   console.log("embedded signing");
   console.log(req.params)
-	res.render ('embeddedSigning', { title: "DocuSign CloudSpokes Documents", data: req.params } );
+  res.render ('embeddedSigning', { title: "DocuSign CloudSpokes Documents", data: req.params } );
 }
 
 
@@ -36,7 +36,10 @@ exports.embeddedSigningComplete = function(req, res) {
     //
     // jeff?: do you want to do anything if this fails?
     //
-    cs.updateMember(userId);
+
+    // challenge 2026
+    // moved inside processGetEnvelope and extended the function
+    // cs.updateMember(userId);
     res.render('SigningComplete/success'
               , { title: "Signing Complete Success!", user: userId });
 
@@ -66,7 +69,10 @@ exports.embeddedSigningComplete = function(req, res) {
   //
   function processGetEnvelope(arguments) {
 
-    console.log(JSON.stringify(arguments));
+    // challenge 2026
+    // pass userTabs
+    var userTabs = arguments[1].replace(/(\r\n|\n|\r)/gm,"");    
+    cs.updateMember(userId, JSON.parse(userTabs).signers[0].tabs);
   }
   
   function loginComplete (arguments) {
