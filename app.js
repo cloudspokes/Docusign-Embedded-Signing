@@ -145,7 +145,7 @@ function triggerEmbeddedSigning(userId, userName, docId, email) {
             , 'tabs' : {
                 'textTabs' : [{
                   'tabLabel': "Name"
-                  , "value": "michael jackson"
+                  , "value": ""
                 }]
             }
           }] 
